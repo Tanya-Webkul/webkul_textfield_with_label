@@ -4,6 +4,8 @@ A quick way to create a TextField aligned with label.
 ## Features
 A simple and effective way of creating TextFields in order to enhance the UI of your application.
 
+![login_design](login_page_ui.png)
+
 ## Getting started
 
 Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
@@ -18,13 +20,19 @@ dependencies:
 import 'package:webkul_textfield_with_label/webkul_textfield_with_label.dart';
 ```
 
+
 After importing the above line in your code, you can use the TextField just like you use any other widget.
 
 With the help of this package, you can specify the Label & can customize it as per you requirement.
+
+
 ```dart
 TextFieldWithLabel(labelText:"...//Write the name");
 ```
+
 **labelText** is the required property.
+
+## Properties
 
 Here are some of the major properties supported by the package...
 
@@ -38,7 +46,9 @@ Here are some of the major properties supported by the package...
 | decoration | Specify the decoration for the TextField with InputDecorationTextField class
 <!-- TABLE_GENERATE_END -->
 
+
 With this package, you can use all the properties provided by the TextFormField in Flutter by default.
+
 
 ## Sample Usage
 ```dart
@@ -73,4 +83,5 @@ TextFieldWithLabel(
 
 
 See the **example** directory for a complete sample app.
+
 

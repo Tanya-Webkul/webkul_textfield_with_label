@@ -4,8 +4,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
-
 import '../utils/input_decoration.dart';
 export 'package:flutter/services.dart' show SmartQuotesType, SmartDashesType;
 
@@ -146,28 +144,19 @@ class LabelTextFormField extends FormField<String> {
     bool enableIMEPersonalizedLearning = true,
     MouseCursor? mouseCursor,
   }) : assert(initialValue == null || controller == null),
-        assert(textAlign != null),
-        assert(autofocus != null),
-        assert(readOnly != null),
-        assert(obscuringCharacter != null && obscuringCharacter.length == 1),
-        assert(obscureText != null),
-        assert(autocorrect != null),
-        assert(enableSuggestions != null),
-        assert(scrollPadding != null),
+        assert(obscuringCharacter.length == 1),
         assert(maxLines == null || maxLines > 0),
         assert(minLines == null || minLines > 0),
         assert(
         (maxLines == null) || (minLines == null) || (maxLines >= minLines),
         "minLines can't be greater than maxLines",
         ),
-        assert(expands != null),
         assert(
         !expands || (maxLines == null && minLines == null),
         'minLines and maxLines must be null when expands is true.',
         ),
         assert(!obscureText || maxLines == 1, 'Obscured fields cannot be multiline.'),
         assert(maxLength == null || maxLength == TextField.noMaxLength || maxLength > 0),
-        assert(enableIMEPersonalizedLearning != null),
         super(
         initialValue: controller != null ? controller.text : (initialValue ?? ''),
         enabled: enabled ?? decoration?.enabled ?? true,

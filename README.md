@@ -2,16 +2,16 @@
 A quick way to create a TextField aligned with label.
 
 ## Features
-A simple and effective way of creating TextFields in order to enhance the UI of your application.
+designed to make the process of creating and implementing TextFields a breeze. With just a few lines of code, you can add stylish and interactive text input fields to your application, providing a seamless user experience.
 
-![login_design](login_page_ui.png)
+![login_page_ui](https://github.com/Tanya-Webkul/webkul_textfield_with_label/blob/main/login_page_ui.png?raw=true)
 
 ## Getting started
 
 Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
 ```yaml
 dependencies:
-  webkul_textfield_with_label: ^0.0.1
+  webkul_textfield_with_label: ^0.0.3
 ```
 
 ## Usage

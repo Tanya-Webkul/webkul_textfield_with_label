@@ -11,7 +11,7 @@ A package designed to make the process of creating and implementing interactive 
 Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
 ```yaml
 dependencies:
-  webkul_textfield_with_label: ^0.0.4
+  webkul_textfield_with_label: ^0.0.5
 ```
 
 ## Usage

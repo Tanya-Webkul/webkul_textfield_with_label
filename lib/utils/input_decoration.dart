@@ -99,8 +99,7 @@ class InputDecorationTextField extends InputDecoration {
 
   @override
   EdgeInsetsGeometry? get contentPadding =>
-      contentEdgePadding ??
-      const EdgeInsets.fromLTRB(12, 12, 12, 12);
+      contentEdgePadding ?? const EdgeInsets.fromLTRB(12, 12, 12, 12);
 
   @override
   InputBorder? get focusedBorder => focusedInputBorder;

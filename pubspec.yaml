@@ -1,6 +1,6 @@
 name: webkul_textfield_with_label
 description: A package designed to make the process of creating and implementing stylish and interactive TextField to your application, providing a seamless user experience.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/Tanya-Webkul/webkul_textfield_with_label
 
 environment:

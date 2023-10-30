@@ -54,14 +54,16 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   const Text(
                     "Hello Again !!",
-                    style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 12.0,
                   ),
                   const Text(
                     "Welcome back you've been missed!!",
-                    style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 24.0,
@@ -69,6 +71,7 @@ class _HomePageState extends State<HomePage> {
                   TextFieldWithLabel(
                       controller: emailController,
                       labelText: "Email",
+                      isRequired: true,
                       inputDecorationTextField: InputDecorationTextField(
                         prefixIconImage: const Icon(Icons.person),
                         hint: 'Enter Username',
@@ -96,6 +99,7 @@ class _HomePageState extends State<HomePage> {
                       }),
                   TextFieldWithLabel(
                     controller: pwdController,
+                    isRequired: true,
                     obscureText: isPasswordVisible ? false : true,
                     maxLines: 1,
                     labelText: 'Password',
@@ -112,8 +116,8 @@ class _HomePageState extends State<HomePage> {
                             });
                           },
                           child: Icon(isPasswordVisible
-                              ? Icons.visibility_off
-                              : Icons.visibility)),
+                              ? Icons.visibility
+                              : Icons.visibility_off)),
                       contentEdgePadding: const EdgeInsets.all(14.0),
                       focusedInputBorder: OutlineInputBorder(
                           borderSide: const BorderSide(color: Colors.white),

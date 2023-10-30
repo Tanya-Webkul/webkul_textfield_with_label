@@ -13,3 +13,7 @@
 [0.0.4] - 2023-06-16
 
 * Code Improvements & Warnings removed
+
+[0.0.5] - 2023-10-30
+
+* TextField "isRequired" feature added with Label Text

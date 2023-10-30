@@ -1,6 +1,7 @@
 library textfield_with_label;
 
 import 'dart:core';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:webkul_textfield_with_label/widget/textfield.dart';
 import 'utils/input_decoration.dart';
@@ -8,6 +9,9 @@ import 'utils/input_decoration.dart';
 class TextFieldWithLabel extends StatefulWidget {
   final double? padding;
   final String labelText;
+  final bool? isRequired;
+  final String? isRequiredText;
+  final TextStyle? isRequiredTextStyle;
   final TextStyle? labelTextStyle;
   final double? gapBtwLblAndField;
   final TextEditingController? controller;
@@ -82,7 +86,10 @@ class TextFieldWithLabel extends StatefulWidget {
       this.textCapitalization,
       this.showCursor,
       this.onFieldSubmitted,
-      this.textDirection})
+      this.textDirection,
+      this.isRequired,
+      this.isRequiredText,
+      this.isRequiredTextStyle})
       : super(key: key);
 
   @override
@@ -98,11 +105,27 @@ class _TextFieldWithLabelState extends State<TextFieldWithLabel> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            widget.labelText,
-            style: widget.labelTextStyle ??
-                const TextStyle(color: Colors.black, fontSize: 16.0),
-          ),
+          RichText(
+              text: TextSpan(children: [
+            TextSpan(
+              text: widget.labelText,
+              style: widget.labelTextStyle ??
+                  const TextStyle(color: Colors.black, fontSize: 16.0),
+            ),
+            widget.isRequired == true
+                ? WidgetSpan(
+                    child: Text(widget.isRequiredText ?? "*",
+                        style: widget.isRequiredTextStyle ??
+                            const TextStyle(
+                              color: Colors.red,
+                              fontSize: 16.0,
+                              fontFeatures: <FontFeature>[
+                                FontFeature.superscripts(),
+                              ],
+                            )),
+                  )
+                : const TextSpan(text: ""),
+          ])),
           SizedBox(
             height: widget.gapBtwLblAndField ?? 6.0,
           ),
